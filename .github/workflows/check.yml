@@ -17,6 +17,8 @@ jobs:
         run: |
           mkdir -p "$(brew --repository)/Library/Taps/kimjisub"
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/kimjisub/homebrew-tap"
+      - name: Trust this tap
+        run: brew trust kimjisub/tap
       - name: Style
         run: brew style --cask kimjisub/tap/toolsmith
       - name: Audit

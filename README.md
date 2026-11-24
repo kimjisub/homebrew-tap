@@ -3,8 +3,12 @@
 Homebrew casks for [kimjisub](https://github.com/kimjisub)'s apps.
 
 ```sh
-brew install --cask kimjisub/tap/toolsmith
+brew tap kimjisub/tap
+brew trust kimjisub/tap   # Homebrew asks you to trust third-party taps once
+brew install --cask toolsmith
 ```
+
+Update with `brew upgrade --cask toolsmith`. The app also updates itself, so Homebrew leaves running copies alone unless you pass `--greedy`.
 
 | Cask | App |
 |---|---|
