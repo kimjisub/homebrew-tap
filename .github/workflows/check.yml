@@ -1,0 +1,23 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v7
+      - name: Tap this checkout
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/kimjisub"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/kimjisub/homebrew-tap"
+      - name: Style
+        run: brew style --cask kimjisub/tap/toolsmith
+      - name: Audit
+        run: brew audit --cask --online kimjisub/tap/toolsmith
