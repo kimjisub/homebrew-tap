@@ -16,6 +16,7 @@ cask "toolsmith" do
   depends_on macos: :tahoe
 
   app "Toolsmith.app"
+  binary "#{appdir}/Toolsmith.app/Contents/Helpers/toolsmith"
 
   uninstall launchctl: "kim.jisub.toolsmith.helper",
             quit:      "kim.jisub.toolsmith"

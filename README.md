@@ -8,6 +8,8 @@ brew trust kimjisub/tap   # Homebrew asks you to trust third-party taps once
 brew install --cask toolsmith
 ```
 
+The cask also links the `toolsmith` command line tool (`toolsmith charge status`, `toolsmith charge limit 80`, …).
+
 Update with `brew upgrade --cask toolsmith`. The app also updates itself, so Homebrew leaves running copies alone unless you pass `--greedy`.
 
 | Cask | App |
