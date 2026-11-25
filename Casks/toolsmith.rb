@@ -1,6 +1,6 @@
 cask "toolsmith" do
-  version "2026.11.4"
-  sha256 "4045ac3876ae02ca5a489bacdab7cd8879a4413bb9b6d9907a523ddccc620c3d"
+  version "2026.11.5"
+  sha256 "901420c7f09b0f79048e91c73a14a86dc73c205b19a8e422563ef3b2ea71b4a8"
 
   url "https://github.com/kimjisub/toolsmith/releases/download/v#{version}/Toolsmith-#{version}.dmg"
   name "Toolsmith"
